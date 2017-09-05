@@ -1,0 +1,273 @@
+@import "../settings/mixins.scss";
+
+body {
+    @include margin(0, auto, 0, auto);
+    background-color: #fff;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+td {
+    @include font-normal();
+    @include margin(0, 0, 0, 0);
+    @include padding(0, 0, 0, 0);
+    @include text-size-adjust(none);
+}
+img {
+    @include margin(0, auto, 0, auto);
+    @include padding(0, 0, 0, 0);
+    //display: block;
+    //width: 100%;mr10
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic;
+}
+.table-email {
+    max-width: 676px;
+    @include margin(0, auto, 0, auto);
+}
+.table-header {
+    background-color: #2e2a56;
+    width: 100%;
+}
+.table-header-zero {
+    width:100%;
+    td{
+        height: 26px;
+        background-color: #2e2a56;
+    }
+}
+.td-header {
+    font-size: round($fz * 1.5);
+    padding:0 ;
+    &.left{
+        width: 50%;
+        text-align: right;
+        color: #ffffff;
+        font-family: Philosopher;
+        font-size: 43px;
+        font-weight: 400;
+        text-transform: uppercase;
+        @include padding(0px, 8px, 0px, 0px);
+        line-height: 1;
+    }
+    &.right{
+        width: 50%;
+        color: #ffffff;
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 17px;
+        text-align: left;
+        @include padding(0px, 0px, 0px, 8px);
+
+        border-left:1px solid #575477;
+    }
+}
+.header-title{
+    width:100%;
+    td{
+
+        @include padding(26px, 26px, 26px, 26px);
+        color: #000000;
+        font-family: "Open Sans";
+        font-size: 35px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.header-order{
+    width: 100%;
+    td{
+        @include padding(16px, 16px, 16px, 16px);
+        background-color: #fcc833;
+        text-align: center;
+
+        color: #000000;
+        font-family: "Open Sans";
+        font-size: 27px;
+        font-weight: 300;
+        span{
+            font-weight: 600;
+        }
+
+    }
+}
+.content-order{
+    width: 100%;
+    @include margin(2%, 0%, 2%, 0%);
+    .left{
+        width: 48%;
+        margin-right:2%;
+       // padding: 2% 1% 5% 3%;
+        height: 100%;
+        vertical-align: top;
+    }
+    .right{
+        width: 50%;
+       // padding: 2% 3% 5% 1%;
+        height: 100%;
+        vertical-align: top;
+    }
+    .first_level{
+        @include margin(0, 3%, 0, 3%);
+        width: 94%;
+    }
+    .main-bg{
+        background: #ededed;
+        color: #000000;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        vertical-align: top;
+        @include padding(2px, 2px, 2px, 2px);
+        table{
+            width: 100%;
+            td{
+                vertical-align: top;
+                border-bottom: 1px solid #bdbdbd;
+                line-height:1.1;
+                @include padding(10px, 10px, 10px, 10px);
+            }
+        }
+        .grey{
+            color: #808080;
+        }
+        .pl{
+            padding-left: 11px;
+        }
+        p{
+            padding-bottom: 0px;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        span{
+            font-size: 13px;
+            display: block;
+            @include margin(0px, 0px, 2px, 0px);
+        }
+        .left-col{
+            border-right: 1px solid #bdbdbd;
+            width: 50%;
+            color: #2e2a56;
+        }
+        .right-col{
+            width: 50%;
+            color: #2e2a56;
+        }
+    }
+
+}
+.tariff-order{
+    width: 100%;
+    //table{
+    //    width: 100%;
+    //}
+    .main-wrap{
+        width: 100%;
+        @include padding(0, 2%, 5%, 2%);
+    }
+    .head{
+        &.left{
+            @include padding(3%, 5%, 3%, 5%);
+            background: #4d4a73;
+        }
+        &.right{
+            @include padding(3%, 5%, 3%, 5%);
+            background: #c8c7d4;
+
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            color: #000000;
+        }
+    }
+    .left{
+        width: 48%;
+        background: #37335d;
+        @include padding(1%, 5%, 1%, 5%);
+
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+
+    }
+    .right{
+        width: 50%;
+        @include padding(1%, 5%, 1%, 5%);
+        background: #ededed;
+
+        text-align: center;
+        color: #000000;
+        font-size: 22px;
+        font-weight: 600;
+        span {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+.footer{
+    @include padding(5%, 10%, 5%, 10%);
+    background: #403d67;
+    background-image: url(http://front-end.web-experience.eu/autodoro-img/bg-footer.png);
+    background-size: cover;
+    .better{
+        color: #ffffff;
+        font-family: "Open Sans";
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
+
+        @include padding(0, 0%, 3%, 0%);
+    }
+    .white{
+        height: 58px;
+        background-color: #ffffff;
+    }
+    img{
+        margin-right: 10px;
+    }
+}
+
+.table-medium {
+    background-color: $accent-color-2;
+}
+.td-medium-text {
+    @include padding(15px, 10px, 15px, 10px);
+}
+.table-columns {
+    background-color: $accent-color-3;
+    width: 100%;
+}
+.td-columns {
+    @include padding(10px, 5px, 10px, 5px);
+}
+.table-col {
+    width: 50%;
+}
+.td-col {
+    @include padding(5px, 10px, 5px, 10px);
+    width: $width / 2;
+    text-align: center;
+}
+.col-img {
+    max-width: 270px;
+    max-height: 180px;
+}
+.link-col-action {
+    @include font-normal();
+    @include margin(0, 0, 0, 0);
+    @include padding(5px, 15px, 5px, 15px);
+    @include text-size-adjust(none);
+    background-color: $action-color;
+    color: $light-color;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
